@@ -9,7 +9,6 @@ import { Label } from '@/components/ui/label';
 import { AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Link } from 'react-router-dom';
-import logo from '@/assets/zenith logo.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
