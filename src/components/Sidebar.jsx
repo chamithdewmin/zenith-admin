@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-  { to: '/inventory', icon: Mail, label: 'Inbox' },
+  { to: '/inbox', icon: Mail, label: 'Inbox' },
   { to: '/settings', icon: Settings, label: 'Settings' },
 ];
 

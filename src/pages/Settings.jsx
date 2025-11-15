@@ -43,7 +43,7 @@ const Settings = () => {
   return (
     <>
       <Helmet>
-        <title>Settings</title>
+        <title>Admin | Settings</title>
       </Helmet>
 
       <div className="space-y-6 max-w-4xl">

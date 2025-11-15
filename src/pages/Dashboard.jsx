@@ -43,7 +43,7 @@ const Dashboard = () => {
   return (
     <>
       <Helmet>
-        <title>Dashboard - Admin Zenith</title>
+        <title>Admin | Dashboard</title>
         <meta name="description" content="Admin dashboard with email analytics and blog insights" />
       </Helmet>
 

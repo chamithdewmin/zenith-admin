@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>Login - Admin Panel</title>
+        <title>Admin | Login</title>
         <meta name="description" content="Login to Admin Panel email management system" />
       </Helmet>
 

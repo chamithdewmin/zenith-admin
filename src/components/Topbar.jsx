@@ -59,7 +59,7 @@ const Topbar = ({ onMenuClick }) => {
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">You have received 5+ emails.</p>
                   <div className="mt-3">
-                    <DropdownMenuItem onClick={() => navigate('/inventory')}>Open Inbox</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => navigate('/inbox')}>Open Inbox</DropdownMenuItem>
                   </div>
                 </div>
               </DropdownMenuContent>
