@@ -6,14 +6,14 @@ import { cn } from '@/lib/utils';
 
 const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [themeMode, setThemeMode] = useState(() => localStorage.getItem('themeMode') || 'light');
+  const [themeMode, setThemeMode] = useState(() => localStorage.getItem('themeMode') || 'dark');
 
   useEffect(() => {
-    const handler = () => setThemeMode(localStorage.getItem('themeMode') || 'light');
+    const handler = () => setThemeMode(localStorage.getItem('themeMode') || 'dark');
     window.addEventListener('themeModeChanged', handler);
     window.addEventListener('storage', handler);
     // initialize class on mount
-    document.documentElement.classList.toggle('dark', (localStorage.getItem('themeMode') || 'light') === 'dark');
+    document.documentElement.classList.toggle('dark', (localStorage.getItem('themeMode') || 'dark') === 'dark');
     return () => {
       window.removeEventListener('themeModeChanged', handler);
       window.removeEventListener('storage', handler);

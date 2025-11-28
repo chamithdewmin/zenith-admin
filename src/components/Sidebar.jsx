@@ -1,21 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  LayoutDashboard, 
+import {
+  LayoutDashboard,
   Settings,
   X,
-  Mail
+  Mail,
+  Users,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-const navItems = [
-  { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-  { to: '/inbox', icon: Mail, label: 'Inbox' },
-  { to: '/settings', icon: Settings, label: 'Settings' },
-];
+import { useAuth } from '@/contexts/AuthContext';
 
 const Sidebar = ({ isOpen, onClose }) => {
+  const { user } = useAuth();
+  const isAdmin = user?.role === 'admin';
+
+  const navItems = [
+    { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+    { to: '/inbox', icon: Mail, label: 'Inbox' },
+    ...(isAdmin ? [{ to: '/users', icon: Users, label: 'User Management' }] : []),
+    { to: '/settings', icon: Settings, label: 'Settings' },
+  ];
   return (
     <>
       {/* Mobile overlay */}

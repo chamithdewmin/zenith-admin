@@ -13,6 +13,16 @@
 	</head>
 	<body>
 		<div id="root"></div>
+		<!-- Apply default theme before React mounts to avoid flash. Falls back to 'dark' if unset. -->
+		<script>
+		  (function(){
+		    try {
+		      const theme = localStorage.getItem('themeMode') || 'dark';
+		      if (theme === 'dark') document.documentElement.classList.add('dark');
+		      else document.documentElement.classList.remove('dark');
+		    } catch (e) { /* ignore */ }
+		  })();
+		</script>
 		<script type="module" src="/src/main.jsx"></script>
 	</body>
 </html>
